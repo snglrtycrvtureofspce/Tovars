@@ -1,0 +1,35 @@
+﻿<Window x:Class="Diplom.AddTovarWindow1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Diplom"
+        mc:Ignorable="d"
+        Title="Добавление товара" Height="514" Width="500"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid  VerticalAlignment="Top" Height="512">
+
+        <Label Content="Добавление товара" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="24" FontStyle="Italic" FontWeight="Bold" Margin="131,47,0,0" Height="43" Width="264"></Label>
+        <Label Content="Название товара" HorizontalAlignment="Left" Margin="79,138,0,0" VerticalAlignment="Top" Width="184" FontSize="14" FontWeight="Bold" Height="27" FontFamily="Cambria"/>
+        <Label Content="Еденица измерения" HorizontalAlignment="Left" Margin="81,0,0,0"  VerticalAlignment="Center"
+            Width="312" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.459,0.577" Height="42" FontFamily="Cambria"/>
+        <TextBox x:Name="tovarTxt" HorizontalAlignment="Left"  Margin="79,176,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="316" Height="22" Background="White" BorderBrush="#FF2B65C1" RenderTransformOrigin="0.459,-1.405"/>
+        <TextBox x:Name="edTxt" HorizontalAlignment="Left"  Margin="79,282,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Height="21" Background="White" BorderBrush="#FF2B65C1"/>
+
+        <Button x:Name="appointBtn" Click="addBtn_Click" Content="Добавить" HorizontalAlignment="Left" Margin="40,424,0,0" VerticalAlignment="Top" Width="166" Height="43" Background="#FF2B65C1" FontFamily="Cambria" FontSize="16" Foreground="White" BorderBrush="#FF2B65C1">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="cancelBtn" Click="cancelBtn_Click" Content="Отменить" HorizontalAlignment="Left" Margin="288,424,0,0" VerticalAlignment="Top" Width="166" Height="43" Background="#FF86B2F1" FontFamily="Cambria" FontSize="16" BorderBrush="#FF86B2F1">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label Content="Цена за единицу товара" HorizontalAlignment="Left" Margin="81,323,0,0"  VerticalAlignment="Top"
+            Width="312" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.459,0.577" Height="41" FontFamily="Cambria"/>
+        <TextBox x:Name="edTxt_Copy" HorizontalAlignment="Left"  Margin="79,369,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="314" Height="21" Background="White" BorderBrush="#FF2B65C1" InputScope="Default"/>
+
+    </Grid>
+</Window>

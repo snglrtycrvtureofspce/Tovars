@@ -1,0 +1,43 @@
+﻿<Window x:Class="Diplom.AddItemWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Добавление продажи" Height="513" Width="500"
+        Loaded="Window_Loaded"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <Grid  VerticalAlignment="Top" Height="503">
+
+        <Label Content="Добавление продажи" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="24" FontStyle="Italic" FontWeight="Bold" Margin="0,48,0,0" Height="43" Width="264"></Label>
+        <Label Content="Дата" HorizontalAlignment="Left" Margin="288,314,0,0"  VerticalAlignment="Top"
+               Width="120" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.459,0.577" Height="28" FontFamily="Cambria"/>
+        <Label Content="Товар" HorizontalAlignment="Center" Margin="0,114,0,0" VerticalAlignment="Top" Width="50" FontSize="14" FontWeight="Bold" Height="27" FontFamily="Cambria" RenderTransformOrigin="1.379,0.843"/>
+
+        <ComboBox x:Name="tovarBox"
+                  ItemsSource="{Binding}" 
+                  HorizontalAlignment="Center" Margin="0,161,0,0" VerticalAlignment="Top" Width="360" Height="43" BorderBrush="#FF2B65C1" SelectionChanged="tovarBox_SelectionChanged"/>
+
+        <TextBox x:Name="dateTxt" IsReadOnly="True" HorizontalAlignment="Left"  Margin="288,360,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" Height="21" Background="White" BorderBrush="#FF2B65C1"/>
+
+        <Button x:Name="appointBtn" Click="addBtn_Click" Content="Оформить" HorizontalAlignment="Left" Margin="40,404,0,0" VerticalAlignment="Top" Width="166" Height="43" Background="#FF2B65C1" FontFamily="Cambria" FontSize="16" Foreground="White" BorderBrush="#FF2B65C1">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="cancelBtn" Click="cancelBtn_Click" Content="Отменить" HorizontalAlignment="Left" Margin="288,404,0,0" VerticalAlignment="Top" Width="166" Height="43" Background="#FF86B2F1" FontFamily="Cambria" FontSize="16" BorderBrush="#FF86B2F1">
+            <Button.Effect>
+                <DropShadowEffect/>
+            </Button.Effect>
+        </Button>
+        <Label Content="Количество товара" HorizontalAlignment="Left" Margin="70,230,0,0"  VerticalAlignment="Top"
+            Width="142" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.459,0.577" Height="28" FontFamily="Cambria"/>
+        <TextBox x:Name="KolichTxt" IsEnabled="False" HorizontalAlignment="Left"  Margin="70,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" Height="21" Background="White" BorderBrush="#FF2B65C1" TextChanged="KolichTxt_TextChanged"/>
+        <Label Content="Итоговая стоимость" HorizontalAlignment="Left" Margin="288,230,0,0"  VerticalAlignment="Top"
+            Width="166" FontSize="14" FontWeight="Bold" RenderTransformOrigin="0.459,0.577" Height="28" FontFamily="Cambria"/>
+        <TextBox x:Name="ItogTxt" IsReadOnly="True" HorizontalAlignment="Left"  Margin="288,276,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="166" Height="21" Background="White" BorderBrush="#FF2B65C1"/>
+
+    </Grid>
+</Window>
+
